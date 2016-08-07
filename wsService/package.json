@@ -1,0 +1,20 @@
+{
+  "main": "html/index.html",
+  "name": "ws-Server-demo",
+  "description": "WebSocketServerApp",
+  "version": "0.0.01",
+  "keywords": [ "demo", "WebSocket" ],
+  "window": {
+    "title": "WebSocket Server Demo",
+    // "icon": "link.png",
+    "toolbar": true,
+    "frame": true,
+    "width": 200,
+    "height": 10
+    // "position": "mouse",
+    // "min_width": 400,
+    // "min_height": 200,
+    // "max_width": 800,
+    // "max_height": 600
+  }
+}

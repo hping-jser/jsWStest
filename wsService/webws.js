@@ -14,4 +14,4 @@ wss.on('connection', function(ws){
 	});
 	wsList.push(ws);
 });
-window.a
+(function(){}())

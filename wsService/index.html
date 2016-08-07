@@ -6,9 +6,21 @@
 </head>
 <body>
 <script type="text/javascript" src="webws.js"></script>
-<div>测试</div>
+<button>打开调试工具</button>
 
 </body>
 <script type="text/javascript">
+(function(){
+	var button = document.querySelector('button');
+	var win = gui = require('nw.gui').Window.get();
+	function showToolDev(){
+		win.showDevTools();
+	}
+	button.addEventListener('click', showToolDev);
+ 	console.log(win);
+}())
+// var gui = require('nw.gui'); showDevTools
+
+//     var win = gui.Window.get();
 </script>
 </html>
