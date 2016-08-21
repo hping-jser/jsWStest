@@ -24,13 +24,20 @@ function log( str ){
                 case "CHAT":
                     sendChat( data.param, ws );
                     break;
+                case 'GET_USER':
+                    getAllUser( ws, data.param );
+                    break;
                 default:
                     break;
             }
             log( data );
         });
-        ws.on( "close", function(){ links-- } );
-        ws.on( "error", function(){ log( 'error' ) } );
+        ws.on( "close", function(){
+            links--;
+        } );
+        ws.on( "error", function(){
+            log( 'error' )
+        } );
     });
 
     function login( data,ws ){
@@ -71,7 +78,7 @@ function log( str ){
         var temp = {sno: data.sno,success: false};
         if( wsList[ user ] ){
             delete  data.sno;
-            sendMessage( wsList[ user ], 'CHAT' );
+            sendMessage( wsList[ user ], 'CHAT', data );
             temp.success = true;
         }
         sendMessage( ws, 'CHAT', temp );
@@ -82,8 +89,17 @@ function log( str ){
             param: data
         };
         if( clent.send ){
-
             clent.send( JSON.stringify( message ) );
         }
+    }
+
+    function getAllUser(ws, data){
+        var users = [];
+        for( var user in wsList ){
+            if( data.account !== user ){
+                users.push( user );
+            }
+        }
+        sendMessage( ws,'GET_USER' ,{sno: data.sno,userList: users});
     }
 }());
