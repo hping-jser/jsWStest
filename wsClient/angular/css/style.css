@@ -1,0 +1,268 @@
+﻿html,body,div,p,h1,h2,h3,h4,h5,h6,span{
+	box-sizing: border-box;
+    font-style: normal;
+    font-weight: normal;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+button:focus{
+    outline: none;
+}
+html,body{
+	width: 100%;
+	height: 100%;
+
+	background: url(../img/login/login-bg.jpg) no-repeat center center;
+	overflow: hidden;
+	-webkit-user-select: none;
+}
+
+/* 底部黑条提示  */
+.app-hint{
+    display: none;
+}
+.app-hint-show{
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 5rem;
+    width: 100%;
+    text-align: center;
+}
+.app-hint span{
+    color: #fff;
+    background: #000;
+    opacity: 0.9;
+    line-height: 1.875rem;
+    font-size: 1rem;
+    padding: 8px 14px;
+    border-radius: 1.5rem;
+}
+
+/* 登录模块  */
+.login-background{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 100%;
+    background: url(../img/login/login-bg.jpg) no-repeat center center;
+    background-size: 100% 100%;
+}
+.login-header{
+    position: relative;
+    min-height: 12rem;
+    -webkit-box-flex: 1.5;
+}
+.login-header img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 10rem;
+    height: 10rem;
+    margin: -5rem;
+    border-radius: 50%;
+    border: 4px solid #8AABCB;
+}
+
+.login-section input{
+    display: block;
+    width: 80%;
+    max-width: 17rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    padding: 5px 5px 5px 20px;
+    margin: 1rem auto;
+    margin-top: 0;
+    line-height: 1.875rem;
+    border: none;
+    background: #fff;
+            transition: box-shadow 0.40s;
+    -webkit-transition: box-shadow 0.40s;
+}
+.login-section input:focus{
+    outline: none;
+    box-shadow: 0px 0px 5px 1px #54AFF9;       
+}
+.login-btn-login{
+    width: 80%;
+    max-width: 17rem;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    border-radius: 5px;
+    background: #48659F;
+    cursor: pointer;
+}
+.login-btn-login-disabled{
+    background: #6280BB;
+}
+.login-btn-login:active{
+    /*background: #6280BB;*/
+}
+
+.login-footer{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+}
+.login-btn-set{
+    position: fixed;
+    right: 4px;
+    bottom: 4px;
+    background: #ddd;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+.login-footer-hidden{
+    /*position: absolute;
+    left: 0;
+    top: 0;*/
+    /*background: #48659F;*/
+    /*width: 100%;*/
+    min-height: 5rem;
+    -webkit-box-flex: 1;
+    /*z-index: 10;*/
+}
+.login-copyright{
+    /*position: absolute;
+    left: 0;
+    bottom: 0.5rem;
+    width: 100%;*/
+    text-align: center;
+    line-height: 2.1rem;
+}
+/* 登陆设置 */
+.login-set-bg{
+    font-size: 12px;
+    padding: 10px;
+    /*background: #fff;*/
+    height: 100%;
+}
+.login-btn-set-back{
+    padding: 0;
+    line-height: 30px;
+    /*margin-bottom: 20px;*/
+    background: none;
+    border: none;
+}
+
+
+/* im-dialog */
+.im-dialog-background{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 100%;
+}
+.im-dialog-header{
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+    /*text-align: center;*/
+    background: #3F6BA8;
+    z-index: 9999;
+}
+.im-dialog-section{
+    padding-top: 10px;
+    background: #D4EBF9;
+    -webkit-box-flex: 1;
+}
+.im-msg-chat{
+    padding: 0 10px;
+    line-height: 25px;
+}
+.im-msg-chat.right{
+    text-align: right;
+}
+.im-dialog-footer{
+    background: #fff;
+    padding: 5px 0;
+    border-top: 1px solid #aaa;
+}
+.im-dialog-footer-input{
+    position: relative;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+}
+.im-dialog-footer-btn{
+    position: relative;
+    text-align: center;
+    width: 3rem;
+    line-height: 1rem;
+}
+.im-dialog-footer-btn span{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    line-height: 2rem;
+}
+
+.im-dialog-input{
+    border-bottom: 1px solid #54AFF9;
+    outline: none;
+    line-height: 1.3rem;
+    min-height: 2rem;
+    max-height: 6rem;
+    padding: 5px;
+    overflow: hidden;
+    -webkit-box-flex: 1;
+}
+.im-dialog-ems{
+    padding: 0 10px;
+    padding-top: 10px;
+}
+.im-dialog-ems>div{
+    display: inline-block;
+    width: 10%;
+    height: 2rem;
+    text-align: center;
+}
+.im-get-users{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.im-user-list{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 0 10px;
+    width: 150px;
+    background: #ddd;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px
+}
+.im-user-list p{
+    border-bottom: 1px solid rgba(51, 51, 51, 0.29);
+}
+.im-user-list p:last-child{
+    border: none;
+}
+/*
+ display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-flex: 1;
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
